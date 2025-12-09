@@ -22,7 +22,7 @@ RockYou.txt: The wordlist used for password cracking.
 
 🚀 Implementation Steps
 1. Lab Environment Setup
-Deployed Ubuntu Server as the target, configured with an intentionally weak user (admin:123456) and OpenSSH server enabled.
+Deployed Ubuntu Server as the target, configured with an intentionally weak user (admin1:123456) and Open SSH server enabled.
 
 Deployed Parrot Security as the attacker.
 
@@ -34,7 +34,7 @@ Used Hydra to launch a brute-force attack against the victim's SSH service (Port
 Command Used:
 Bash
 
-hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.8.27 ssh -t 4
+hydra -l admin1 -P /usr/share/wordlists/rockyou.txt 192.168.8.27 ssh -t 4
 
 Outcome: Successfully cracked the password (123456) and generated thousands of authentication failure logs.
 <img width="423" height="54" alt="attack" src="https://github.com/user-attachments/assets/a4e50a9c-04fa-47bd-88a9-5b3b9d37f903" />
